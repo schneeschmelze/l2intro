@@ -1,0 +1,408 @@
+# -*- mode: org; coding: utf-8 -*-
+#+TITLE: Textsatz mit TeX/LaTeX
+#+SUBTITLE: Was ist (La)TeX? Und wie setzt man es ein?
+#+AUTHOR: Jürgen Fenn
+#+DATE: <2023-09-22 Fr>
+#+LANGUAGE: de
+#+OPTIONS:  H:5 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:  TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc tags:nil
+#+OPTIONS:  title:nil
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: noexport
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: dd
+
+* Was ist TeX? Was ist LaTeX?
+
+#+begin_quote
+/„TeX has always had a special place in my heart. We made the world a
+better place for scientists and engineers. What other piece of
+software is still in active use, essentially the same as it was
+25\nbsp{}years ago?“ –\nbsp{}[[https://tug.org/interviews/fuchs.html][David Fuchs]]/
+#+end_quote
+
+Auf der Website des /LaTeX Project/ wird LaTeX (sprich: lah-tech)
+[[https://www.latex-project.org/about/][folgendermaßen]] beschrieben:
+
+#+begin_quote
+„LaTeX is a document preparation system for high-quality
+typesetting. It is most often used for medium-to-large technical or
+scientific documents but it can be used for almost any form of
+publishing.“
+#+end_quote
+
+Bei [[https://de.wikipedia.org/wiki/LaTeX][LaTeX]] geht es also ums [[https://de.wikipedia.org/wiki/Satz_(Druck)][Setzen]] von Text und Grafik auf eine Seite
+nach [[https://de.wikipedia.org/wiki/Typografie][typographischen Regeln]]. Es geht um das Gestalten von Drucksachen
+mit dem Computer. Dabei ist LaTeX zweierlei: Eine
+[[https://de.wikipedia.org/wiki/Auszeichnungssprache][Auszeichnungssprache]], also ein Dateiformat, das sich auch zum
+Austausch und zur Langzeitarchivierung eignet; und eine Sammlung von
+Makros, die auf dem Textsatzsystem [[https://de.wikipedia.org/wiki/TeX][TeX]] (sprich: tech) aufsetzen. TeX
+war in den 1970er Jahren von Donald\nbsp{}E. Knuth an der Stanford
+University entwickelt worden. Leslie Lamport entwickelte später LaTeX,
+ein Software-Paket, das aus TeX-Makros besteht.
+
+Die Ausgabequalität von LaTeX ist unerreicht schön. Die Bedienung von
+TeX samt der Hilfsprogramme ist einfach zu erlernen. Und die
+TeX-Anwendergruppen – im deutschen Sprachraum: die [[https://www.dante.de/][Deutschsprachige
+Anwendervereinigung TeX e.\nbsp{}V.]], international: die [[https://tug.org/][TeX Users
+Group]] – sowie das [[https://www.latex-project.org/][/LaTeX Project/]] und die Maintainer des
+[[https://ctan.org/][Comprehensive TeX Archive Networks CTAN]] sorgen gemeinnützig und
+ehrenamtlich für die Pflege, die Weiterentwicklung und die Verteilung
+der Software für alle Plattformen.
+
+- [[https://cs.stanford.edu/~knuth/][Homepage von Donald E. Knuth]], Stanford University
+- [[https://tug.org/whatis.html][Just what is TeX?]], ein Überblick bei der TeX Users Group
+- [[https://nitens.org/w/latex/][The Beauty of LaTeX]] von Dario Taraborelli
+- [[https://tug.org/interviews/][TUG Interview Corner]], Interviews mit Teilnehmern an TeX-Projekten
+- Gianluca Pignalberi, Dave Walden: Interview of Frank Mittelbach, in:
+  Free Software Magazine, 23.\nbsp{}März 2006; [[https://www.tug.org/interviews/mittelbach.pdf][bei der TUG]]
+- Arno Trautmann: [[https://www.ctan.org/pkg/tex-overview][An overview of TeX, its children and their friends]],
+  2012, zur Geschichte von TeX 
+- [[https://cre.fm/cre127-tex-und-latex][TeX und LaTeX]], in: Chaosradio Express, 26.\nbsp{}Juni 2009, Tim
+  Pritlove im Gespräch mit Joachim Schrod über Geschichte und
+  Gegenwart von (La)TeX
+- Alexandre Gaudeul:
+  [[https://tug.org/TUGboat/Articles/tb24-1/gaudeul.pdf][The (La)TeX
+  project: A case study of open source software]], in: TUGboat 24
+  (2003), No.\nbsp{}1, pp.\nbsp{}132–145
+
+Der mathematische Formelsatz ist gleichzeitig eine der größten Stärken
+von (La)TeX und eine schwere Hypothek für das Projekt. Denn durch die
+Betonung des Formelsatzes geraten Anfänger aus
+nicht-mathematikgeneigten Fächern und Umgebungen häufig ins Zweifeln,
+ob es sich für sie lohne, LaTeX zu erlernen. LaTeX eignet sich aber
+für alle Arten von Text und Grafik, unabhängig vom Inhalt. Ich
+verwende LaTeX für fast alles, was ich setze. Nachfolgend daher
+vorwiegend Hinweise, die von Interesse für Sozial- und
+Geisteswissenschaftler sein werden.
+
+Um Drucksachen und die Herstellung von Büchern sowie die Typographie
+hat sich eine eigene Sprache entwickelt, die man kennen sollte, wenn
+man sich mit (La)TeX beschäftigt. Die Begriffe tauchen oft in den
+Lehrbüchern auf und werden gerne auch in Diskussionen verwendet.
+
+- [[https://www.typolexikon.de/][Typolexikon]], ein populärwissenschaftliches Langzeitprojekt von
+  Wolfgang Beinert, um Fachwissen rund um die Typographie, Schrift und
+  Grafikdesign 
+- [[https://de.wikipedia.org/wiki/Portal:Schrift][Portal:Schrift]] in der deutschsprachigen Wikipedia
+
+* CTAN
+
+Das /Comprehensive TeX Archive Network/ [[https://ctan.org/][CTAN]] (sprich: zeh-tan) ist ein
+Netzwerk von Servern, über das TeX, LaTeX und die ergänzende Software
+verteilt werden. Das Archiv wird ehrenamtlich geführt und von den
+[[https://tug.org/usergroups.html][TeX-Anwendergruppen]] gefördert. Es wird von vielen [[https://ctan.org/mirrors][anderen Servern
+gespiegelt]]. Den CTAN-Hauptknoten betreibt die Deutschsprachige
+Anwendervereinigung TeX.
+
+Der Bestand des Netzwerks wird über die Portal-Suche auf ctan.org
+erschlossen. Das Verzeichnis von mehreren tausend Paketen ging
+ursprünglich auf den [[http://dante.ctan.org/tex-archive/obsolete/help/Catalogue/index.html][TeX\nbsp{}Catalogue]] zurück, der seit 2018 nur
+noch auf dem Portal fortgeführt wird.
+
+* Installation
+
+(La)TeX kann auf allen Plattformen eingesetzt werden. Benötigt werden
+eine TeX-Distribution – [[https://www.tug.org/texlive/][TeX\nbsp{}Live]] bzw. dessen Variante [[https://www.tug.org/mactex/][MacTeX]]
+oder [[https://miktex.org/][MiKTeX]], jeweils die umfangreichste Version – und ein Editor.
+
+Bei den heutigen Massenspeichern ist es nicht mehr sinnvoll, nur einen
+Teil aller verfügbaren Pakete zu installieren, man sollte immer ein
+komplettes System wählen. Damit ist auch für eine vollständige
+Dokumentation gesorgt. MiKTeX gab es früher nur für Microsoft Windows,
+es wurde mittlerweile aber auch auf Linux und macOS portiert. Unter
+Windows ist MiKTeX gleichwertig mit TeX\nbsp{}Live; unter macOS und
+Linux habe ich bisher keine Erfahrung mit MiKTeX gesammelt, seit 2007
+habe ich immer MacTeX verwendet.
+
+Infrage kommen alle Editoren, die reinen Text bearbeiten können. Es
+gibt einfache Editoren, die bei den Betriebssystemen dabei sind
+(Editor/Notepad unter Windows oder TextEdit auf dem Mac). Die meisten
+besseren Editoren haben auch einen TeX-Mode, es gibt aber auch
+spezielle TeX-Editoren, die das Arbeiten mit (La)TeX besonders gut
+unterstützen:
+
+- [[https://www.gnu.org/software/emacs/][GNU\nbsp{}Emacs]] mit [[https://www.gnu.org/software/auctex/][AUCTeX]] (unter macOS: [[http://aquamacs.org/][Aquamacs]] oder [[https://emacsformacosx.com/][Emacs.app]]),
+- [[https://www.vim.org/][vim]] mit der [[https://vim-latex.sourceforge.net/][latex-suite]],
+- [[https://www.xm1math.net/texmaker/][Texmaker]] oder dessen Fork [[https://www.texstudio.org/][TeXstudio]],
+- [[https://pages.uoregon.edu/koch/texshop/][TeXShop]] oder dessen Klon [[https://tug.org/texworks/][TeXworks]].
+
+Wenn man mit einem Editor schlechte Erfahrungen gemacht hat oder etwas
+– aus welchen Gründen auch immer – nicht funktioniert, sollte man
+nicht zögern, zu einem anderen Editor zu wechseln. In den
+Einführungskursen, die ich bisher gehalten habe, hatte sich TeXstudio
+auf allen Plattformen bewährt. Die Wahl des Werkzeugs sollte von der
+Art und der Größe der Aufgabe abhängig gemacht werden, die damit
+bewältigt werden soll. Ich arbeite seit 2000 auf alle Plattformen mit
+Emacs.
+
+Eine Alternative zu den Plain-Text-Editoren ist ggf. [[https://www.lyx.org/][LyX]] (sprich:
+lücks), das als Frontend zu LaTeX dient. Die Bedienoberfläche ähnelt
+einer Textverarbeitung. Aber auch wer mit LyX arbeitet, sollte mit
+LaTeX umgehen können. Im [[https://wiki.lyx.org/][LyX\nbsp{}Wiki]] findet man zahlreiche
+Anleitungen.
+
+- Installationsanleitungen für [[https://www.latexbuch.de/latex-windows-installieren/][TeX\nbsp{}Live unter Windows\nbsp{}10]]
+  und für [[https://www.latexbuch.de/latex-apple-mac-os-x-installieren/][MacTeX unter macOS]] stellt Joachim Schlosser bereit.
+- David Kastrup: [[https://tug.org/TUGboat/Articles/tb23-1/kastrup.pdf][Revisiting WYSIWYG Paradigms for Authoring LaTeX]], in:
+  TUGboat 23 (2003), No.\nbsp{}1, pp.\nbsp{}57–64. – Deutsch: [[https://archiv.dante.de/DTK/PDF/komoedie_2002_4.pdf][LaTeX
+  und WYSIWYG? preview-latex unter Emacs und andere Ansätz]]e, in: DTK
+  4/2002, S.\nbsp{}10–26.
+
+* Online-Ressourcen
+
+Unter den Texten, die online verfügbar sind, ist die Einführung in
+LaTeX, die das /LaTeX Project/ bereitstellt, grundlegend. Sie ist in
+jeder TeX-Distribution enthalten und kann über =texdoc= aufgerufen
+werden. Kennen sollte man: [[https://ctan.org/pkg/usrguide][usrguide]], [[https://ctan.org/pkg/fntguide][fntguide]] und [[https://ctan.org/pkg/clsguide][clsguide]].
+
+Die Einführung [[https://ctan.org/pkg/lshort-german][l2kurz]] von Marco Daniel, Patrick Gundlach, Walter
+Schmidt, Jörg Knappen, Hubert Partl und Irene Hyna ist der klassische
+Überblick zu LaTeX2e für Anfänger. Sie ist lokal erreichbar bei
+Eingabe von =texdoc l2kurz=. Die wichtigsten typographischen Regeln
+faßt [[https://zvisionwelt.wordpress.com/downloads/][typokurz]] von Christoph Bier zusammen. Die Anleitungen wurden
+seinerzeit (2009) von umfangreichen Diskussionen in der Newsgroup
+de.comp.text.tex begleitet.
+
+Eine deutsche FAQ findet man unter [[https://texfragen.de/][texfragen.de]]. Das Projekt wurde von
+Patrick Gundlach initiiert und seit 2017/2018 von Stefan Kottwitz und
+weiteren Autoren gepflegt. Der Text des Wikis wird geprüft und in
+unregelmäßigen Abständen nach LaTeX exportiert. Auf CTAN gibt es eine
+[[https://ctan.org/pkg/detexfaq][Fassung als PDF]]. Das Projekt folgt der früheren [[https://ctan.org/pkg/faq-de][de-tex-faq]] von Bernd
+Raichle, Rolf Niepraschk und Thomas Hafner nach, die seit 2003 nicht
+mehr aktualisiert worden war. Auch die englische
+[[https://texfaq.org/][UK\nbsp{}TeX\nbsp{}FAQ]], die ursprünglich Robin Fairbairns betreut
+hatte, ist lesenswert, weil sie viele Hintergründe und Bezüge erklärt,
+die man sonst schwer in Anleitungen und Büchern findet und die man
+sich ohne tiefere Kenntnisse auch kaum erschließen kann. Seit Juni
+2018 wird die englische FAQ unter dem Titel /The TeX Frequently Asked
+Question List/ von David Carlisle, Stefan Kottwitz, Karl Berry,
+Joseph Wright und vielen anderen [[https://github.com/texfaq/texfaq.github.io][auf GitHub fortgeführt]].
+
+Zur Fehlersuche in LaTeX-Dokumenten ist die Methode des
+Minimalbeispiels unerlässlich. Christian Faulhammer hatte das Vorgehen
+im Einzelnen im Jahr 2009 [[https://www.minimalbeispiel.de/][zusammengefasst]].
+
+Didaktisch aufbereitetes Lehrmaterial zu LaTeX findet man leicht über
+eine einfache Internet-Suche, zum Beispiel nach den Begriffen =LaTeX
+Kurs=. Viele Materialien zu Veranstaltungen, die vorwiegend an
+Hochschulen gehalten werden, sind frei zugänglich.
+
+In neuerer Zeit hat sich LaTeX zunehmend [[https://de.wikipedia.org/wiki/Unicode][Unicode]] und dem Fontformat
+[[https://de.wikipedia.org/wiki/OpenType][OpenType]] zugewendet. Seit April 2018 erwartet LaTeX die
+Eingabekodierung UTF-8. Wegweisend waren zwei neue TeX-Engines,
+nämlich [[https://xetex.sourceforge.net/][XeTeX]] (seit 2004, Übersicht [[https://www.tug.org/xetex/][bei der TUG]]) und [[http://www.luatex.org/][LuaTeX]] (seit
+2007). Ein Spinoff aus der Erstellung der zweiten Auflage des /LaTeX
+Begleiters/ und des /LaTeX Graphics Companion/ ist Michel Goossens'
+Einführung [[https://xml.web.cern.ch/lgc2/xetexmain.pdf][/The XeTeX Companion. TeX meets OpenType and Unicode/]]. Eine
+grundlegende Einführung zu LuaLaTeX ist [[https://ctan.org/pkg/lualatex-doc][lualatex-doc]] von Manuel
+Pégourié-Gonnard; eine [[https://ctan.org/pkg/lualatex-doc][deutsche Übersetzung]] gibt es von Christine
+Römer. Bereits in der achten Auflage von 2023 liegt die
+LaTeX-Einführung von Peter Flynn vor: /[[http://latex.silmaril.ie/formattinginformation/][Formatting information. An
+introduction to typesetting with LaTeX]]/ ist ein Klassiker, der
+online frei verfügbar ist und den aktuellen Stand der Entwicklung
+darstellt. Sein Buch geht von LuaLaTeX und XeTeX aus.
+
+* Wissenschaftliche Arbeiten mit LaTeX schreiben
+
+In meinem Topic Index zum TeX Catalogue gab es bis 2017 [[http://dante.ctan.org/tex-archive/obsolete/help/Catalogue/bytopic.html#humanities][eine Übersicht]]
+über einschlägige Pakete auf CTAN für die Geisteswissenschaftlen
+allgemein sowie für Psychologie, Jura, Theologie, Wirtschaft, Phonetik
+und Linguistik; sie wird seitdem [[https://ctan.org/topic/humanities][im CTAN-Portal]] fortgeführt. Wie man
+sozial- und geisteswissenschaftliche Arbeiten mit LaTeX schreibt und
+organisiert, erklären mehrere Autoren:
+
+- Marion Neubauer: Feinheiten bei wissenschaftlichen Publikationen –
+  Mikrotypographie-Regeln, in: [[https://archiv.dante.de/DTK/PDF/komoedie_1996_4.pdf][DTK 4/1996]], S.\nbsp{}23–40, [[https://archiv.dante.de/DTK/PDF/komoedie_1997_1.pdf][DTK 1/1997]],
+  S.\nbsp{}25–44
+- [[http://www.sodtalbers.de/tex/][juramisc]], eine Sammlung von LaTeX-Klassen und -Paketen für die
+  rechtswissenschaftliche Arbeit und für das Referendariat von Axel
+  Sodtalbers
+- [[https://www1.essex.ac.uk/linguistics/external/clmt/latex4ling/][LaTeX for Linguists]], LaTeX4Ling, von Douglas J. Arnold
+- David Latchman: [[https://www.tug.org/TUGboat/tb33-2/tb104latchman-thesis.pdf][Preparing your thesis in LaTeX]], in: TUGboat 33
+  (2012), No.\nbsp{}2, pp.\nbsp{}167–171
+- [[http://scholarsfonts.net/][Fonts for scholars – Latin, Germanic Languages, Greek, Hebrew and
+  Linguistics]] von David J. Perry, dort: [[http://scholarsfonts.net/xetextt.pdf][Creating Scolarly
+  Multilingual Documents Using Unicode, OpenType, and XeTeX]]
+- [[https://www.logicmatters.net/latex-for-logicians/][LaTeX for Logicians]] von Peter Smith 
+
+Die Bibliothek der TU München erstellt jährlich eine
+[[https://www.ub.tum.de/literaturverwaltung][Übersicht über
+Literaturverwaltungsprogramme]] – auch über Literaturverwaltungen,
+die sich zur Arbeit mit BibTeX-Datenbanken eignen. BibTeX und Biblatex
+werden von [[https://bibdesk.sourceforge.io/][BibDesk]], [[https://www.jabref.org/][JabRef]] und [[https://www.zotero.org/][Zotero]] unterstützt. Eine reine
+Cloud-Lösung, die auf BibTeX/Biblatex setzt, ist der
+Literaturverwaltungs- und Social-Bookmarking-Dienst [[https://www.bibsonomy.org/][BibSonomy]], der von
+den Universitäten Kassel, Würzburg und von der Humboldt-Universität
+Berlin gehostet und der aktiv entwickelt wird. Wenn etwas nicht
+funktioniert, was selten vorkommt, kann man die Maintainer per E-Mail
+darauf hinweisen. Ich arbeite seit langem mit BibSonomy und Zotero.
+Beide Plattformen können sowohl offen als auch geschlossen, einzeln
+und in einer Gruppe eingesetzt werden.
+
+- Dominik Waßenhoven: Bibliographien erstellen mit biblatex, in: [[https://archiv.dante.de/DTK/PDF/komoedie_2008_2.pdf][DTK
+  2/2008]], S.\nbsp{}53–75; [[https://archiv.dante.de/DTK/PDF/komoedie_2008_4.pdf][DTK 4/2008]], S.\nbsp{}31–50.
+- Philipp Zumstein, Matti Stöhr:
+  [[https://madoc.bib.uni-mannheim.de/39937/][Zur Nachnutzung von
+  bibliographischen Katalog- und Normdaten für die persönliche
+  Literaturverwaltung und Wissensorganisation]]. Universität
+  Mannheim, 2015. Parallel veröffentlicht in: ABI-Technik, 4/2015,
+  210–221.
+
+* Literatur
+
+Einen Überblick über die für /TeX\nbsp{}& Friends/ im allerweitesten
+Sinne relevante Literatur erhält man im /[[http://ftp.math.utah.edu/pub/tex/bib/index-table.html][TeX User Group bibliography
+archive]]/, das Nelson Beebe an der Universität Utah pflegt. Ein
+Ausschnitt daraus ist Teil jeder TeX-Distribution: Das Paket [[https://www.ctan.org/pkg/biblio][biblio]].
+Die Bibliographien texbook1, texbook2 und texbook3 enthalten Literatur
+speziell zu (La)TeX bis in die Gegenwart.
+
+- Nelson Beebe: [[https://tug.org/TUGboat/Articles/tb25-1/beebe-bib.pdf][A bibliographer's toolbox]], in: TUGboat 25(1), 2004,
+  Practical TeX 2004 proceedings, pp.\nbsp{}89–104
+
+Grundlegend für TeX ist das /TeXbook/ von Donald\nbsp{}E. Knuth
+(1984), dessen Quelltext, ebenso wie das /METAFONTbook/ (1986), [[https://www.ctan.org/pkg/knuth-dist][auf
+CTAN veröffentlicht]] worden ist, damit man den Quelltext studieren
+kann. Der Lizenz zufolge darf die Datei gelesen, aber nicht kompiliert
+werden. Eine deutsche Zusammenfassung des TeXbooks von Fritz Cremer
+liegt unter dem Titel /[[https://www.ctan.org/pkg/texbuch][Das kleine TeXBuch]]/ vor (1993). Daneben gibt es
+weitere Lehrbücher: Die /[[https://www.ruhr-uni-bochum.de/TeX/einfuehrung-in-tex.pdf][Einführung in TeX]]/ von Norbert Schwarz
+(3.\nbsp{}Auflage, 1991, unveränderte PDF-Ausgabe 2002), /[[https://ctan.org/pkg/texbytopic][TeX by
+Topic]]/ von Victor Eijkhout (1991; das Buch wurde im Jahr 2014 aus
+Anlaß des 25-jährigen Bestehens von DANTE in Rahmen der Edition Dante
+im Verlag bei Lehmanns Media neu aufgelegt) und /[[https://makingtexwork.sourceforge.net/mtw/index.html][Making TeX work]]/ von
+Norman Walsh (1994, mit Updates: 2002).
+
+Eine Zusammenschau der Lehrbuchliteratur zu LaTeX [[https://www.latex-project.org/help/books/][bietet]] das /LaTeX
+Project/, außerdem gibt es eine [[https://www.tug.org/books/][Übersicht]] bei der TeX Users Group.
+Neben dem /LaTeX-Handbuch/ von Leslie Lamport (2.\nbsp{}Auflage, 1985;
+die deutsche Ausgabe von 1995 ist im Buchhandel leider seit langem
+schon vergriffen und wird wohl nicht mehr aufgelegt) ist der
+/LaTeX-Begleiter/ in mehreren Bänden in mehreren Auflagen die
+umfassendste Dokumentation zu LaTeX2e von Frank Mittelbach, Michel
+Goossens und weiteren Autoren. Im Jahr 2004 erschien die zweite
+Auflage der englischen Ausgabe des ersten Bandes, ein Jahr später die
+deutsche Übersetzung mit einer Reihe von Ergänzungen für den deutschen
+Sprachraum. Aktuell ist die dritte Auflage, die im Jahr 2023 bei dem
+US-amerikanischen Verlag informIT [[https://www.informit.com/store/latex-companion-parts-i-ii-3rd-edition-9780138166489?ranMID=24808][erschien]] und die leider im deutschen
+Buchhandel nur schwer zu bekommen ist. Die zweite Auflage des /LaTeX
+Graphics Companion/ kam 2007 heraus mit einem Nachdruck bei Lehmanns
+Media aus dem Jahr 2022. Der /LaTeX Web Companion/ ist weiterhin auf
+Englisch lieferbar, er wurde aber seit 1999 nicht mehr neu aufgelegt
+und ist daher veraltet; die deutsche Ausgabe /Mit LaTeX ins Web –
+elektronisches Publizieren mit TeX, HTML und XML/ ist leider im
+Buchhandel vergriffen.
+
+Die Veröffentlichung der zweiten Auflage des LaTeX-Begleiters im Jahr
+2005 löste seinerzeit eine Renaissance der Literatur zu LaTeX aus.
+Damals erschienen einige Bücher, die ich von 2006 bis 2009 für die
+Computerzeitschrift c't und für die DTK besprochen hatte. Bereits seit
+2003 gab es ein Rezensionsprojekt, das nach einer Diskussion in der
+Newsgroup de.comp.text.tex von Christian Faulhammer initiiert worden
+war. Die damals erschienenen Buchbesprechungen – jeweils aus dem
+Blickwinkel von Anfängern geschrieben – [[https://www.ctan.org/pkg/dante-book-reviews][wurden auf CTAN gesammelt]].
+Neuerscheinungen seit 2005 sammle ich auch in einer [[https://www.zotero.org/groups/716380/latex-lehrbcher/library][Zotero-Gruppe]]. Als
+praktisches Lehrbuch ist derzeit /[[https://www.mitp.de/IT-WEB/Studium/Wissenschaftliche-Arbeiten-schreiben-mit-LaTeX.html][Wissenschaftliche Arbeiten schreiben
+mit LaTeX]]/ von Joachim Schlosser geeignet. Merklich ist der Trend weg
+vom lektorierten Fachbuch aus dem Verlag hin zu Selfpublishing als
+E-Book, teils im Open Access, mit der Möglichkeit zu einer Bestellung
+als Print on demand. Erwähnenswert aus den letzten Jahren ist – neben
+den [[https://www.dickimaw-books.com/latexresources.html][Büchern von Nicola Talbot]] – vor allem ein Titel von Maïeuil
+Rouquette zum Einsatz von LaTeX in den Sozial- und
+Geisteswissenschaften:
+
+- Maïeuil Rouquette:
+  [[https://shs.hal.science/halshs-00924546][(Xe)LaTeX appliqué aux
+  sciences humaine]]s. Atramenta, Tampere, 2012, online in: Archive
+  ouverte en Sciences de l'Homme et de la Société, 2014, [[https://github.com/maieul/latexhumain][Quelltext auf GitHub]].
+
+Die Zeitschriften der TeX-Anwendervereinigungen werden in Bibliotheken
+gesammelt und in öffentlichen Archiven bereitgestellt. Der Bezug ist
+in der Mitgliedschaft enthalten. Mit einer gewissen Verzögerung sind
+sie auch für Nichtmitglieder online zugänglich:
+
+- [[https://www.dante.de/dtk/][Die TeXnische Komödie]] (DTK), Mitgliederzeitschrift der
+  Deutschsprachigen Anwendervereinigung TeX DANTE
+  e.\nbsp{}V. (seit 1989)
+- [[https://tug.org/TUGboat/][TUGboat]], The Communications of the TeX Users Group (seit 1980)
+- [[https://tug.org/pracjourn/index.html][The PracTeX Journal]], The online journal of the TeX Users Group
+  (2005–2012)
+- [[http://uk-tug-archive.tug.org/baskerville/][Baskerville]], The Annals of the UK TeX Users Group (seit 1994, teils
+  mit Quellen [[https://ctan.org/tex-archive/usergrps/uktug/baskervi][auf CTAN]])
+- [[http://www.ntg.nl/maps/][MAPS]], MAPS is het verenigingsblad van de NTG (seit 1988)
+- [[https://publications.gutenberg-asso.fr/cahiers/][Cahiers GUTenberg]] und [[https://www.gutenberg-asso.fr/-Lettre-GUTenberg-][Lettres GUTenberg]], Zeitschriften der
+  französischsprachigen Anwendervereinigung GUTenberg (seit 1988)
+- [[https://www.guitex.org/home/arstexnica][Ars TeXnica]], Zeitschrift der italienischen User Group GuIT
+  (seit 2006)
+- [[http://www.cervantex.es/materiales][TeXemplares]], Zeitschrift der spanischsprachigen Users Group
+  CervanTeX (2001–2007)
+- [[https://www.eutypon.gr/eutypon/e-issues.html][Eutypon]], Zeitschrift der griechischen Users Group Greek TeX Friends
+  (seit 1998)
+- [[http://ajt.ktug.org/][The Asian Journal of TeX]], TeX für asiatische Sprachen und Englisch
+  (2007–2011)
+
+* Diskussion und Neuigkeiten rund um TeX und LaTeX
+
+Wie bei jedem freien Softwareprojekt gibt es auch bei TeX eine
+Gemeinde von Entwicklern und Benutzern, die sich online zusammenfinden
+und untereinander austauschen. Zwei Aggregatoren – [[https://planet.dante.de/][planet.dante.de]] und
+[[https://texample.net/community/][TeXample.net]] – sammeln Blogs zum Thema. Auf ihrer Hauptseite fasst die
+[[https://tug.org/][TeX Users Group]] Nachrichten zusammen. Das /LaTeX Project/ erstellt in
+bestimmten Abständen Newsletter über [[https://www.latex-project.org/news/latex2e-news/][Neuigkeiten zu LaTeX2e]] und [[https://www.latex-project.org/news/latex3-news/][zu
+LaTeX3]], die man lesen sollte. In der DTK erscheinen deutsche
+Übersetzungen. Sie begleiten neue Releases und informieren allgemein
+über die Entwicklung von TeX. Neue Pakete auf dem dezentral
+organisierten Softwarearchiv [[https://ctan.org/][CTAN]] werden auf der Mailingliste [[https://lists.dante.de/mailman/listinfo/ctan-ann][ctan-ann]]
+und in der Newsgroup comp.text.tex angekündigt. Über die /Neuen Pakete
+auf CTAN/ berichte ich seit 2005 regelmäßig in der
+Mitgliederzeitschrift von DANTE, der [[https://www.dante.de/dtk/][TeXnischen Komödie]] (DTK).
+
+Die ältesten Internetforen sind die Mailinglisten und das Usenet. Viel
+gelesene TeX-Listen sind: [[https://www.listserv.dfn.de/sympa/info/tex-d-l][TeX-D-L]], [[https://tug.org/mailman/listinfo/texhax][texhax]] und [[https://email.esm.psu.edu/mailman/listinfo/macosx-tex][MacOSX-TeX]]. Weitere
+Mailinglisten findet man [[https://www.tug.org/mailman/listinfo/][bei der TeX Users Group]] und [[https://lists.dante.de/mailman/listinfo][bei der
+Deutschsprachigen Anwendervereinigung TeX]]. Die Liste [[https://listserv.heanet.ie/cgi-bin/wa?A0=TYPO-L][Typo-L]] handelt
+von Typographie und Schrift. Das /LaTeX Project/ nutzt den
+Issue-Tracker [[https://github.com/latex3][auf GitHub]]. Wer dort einen Account hat, kann die
+Repositorien beobachten und sich per E-Mail über Änderungen und
+Diskussionen benachrichtigen lassen.
+
+Die TeX-Newsgroups haben in den letzen Jahren an Zuspruch verloren,
+sind aber immer noch hochwertige und wichtige Kanäle für den
+Austausch, für Neuigkeiten und Ankündigungen. Wenn man das
+textbasierte Usenet nutzt, sollte man sie mitlesen: de.comp.text.tex,
+comp.text.tex, fr.comp.text.tex (für den direkten Zugriff über NNTP
+siehe auch die [[https://th-h.de/net/usenet/faqs/newsserverliste/][Liste von Usenet-Anbietern im deutschsprachigen Raum]],
+die regelmäßig in de.comm.provider.usenet gepostet wird).
+
+Die Diskussion findet heute eher in Webforen statt. Das größte Forum
+ist der [[https://tex.stackexchange.com/][TeX-LaTeX StackExchange]]. Ein weiteres englischsprachiges Forum
+ist die [[https://latex.org/forum/][LaTeX Community]]. Webforen in deutscher Sprache sind: [[https://golatex.de/][goLaTeX]],
+[[https://komascript.de/forum][KOMA-Script]], [[https://www.mrunix.de/forums/forumdisplay.php?38-LaTeX-Forum][mrunix.de]] und [[https://www.texwelt.de/][TeXwelt]].
+
+- Jim Hefferon: [[https://www.tug.org/TUGboat/tb32-1/tb100heff.pdf][Which way to the forum?]], in: TUGboat 32 (2011),
+  No.\nbsp{}1, pp.\nbsp{}30–31.
+- Stefan Kottwitz:
+  [[https://www.tug.org/TUGboat/tb32-3/tb102kottwitz.pdf][TeX online
+  communities – discussion and content]], in: TUGboat Volume 32
+  (2011), No.\nbsp{}3, pp.\nbsp{}248–250.
+
+Die TeX-Anwendervereinigungen organisieren eine Reihe von Tagungen, an
+denen man teilnehmen kann. Neulinge sind dort stets willkommen. Die
+Deutschsprachige Anwendervereinigung TeX veranstaltet jeweils eine
+Tagung im Frühling und eine im Herbst, stets zusammen mit einer
+Mitgliederversammlung. Die TeX Users Group TUG trägt eine größere
+Tagung im Sommer aus, abwechselnd in den USA und im Ausland. Infolge
+der Corona-Pandemie ist oft auch eine virtuelle Teilnahme möglich, und
+die Beiträge sind auf YouTube abrufbar. Die Präsentationen werden auf
+der Tagungswebsite gesammelt, und die Proceedings der TUG-Tagung
+erscheinen in der Zeitschrift TUGboat. Tagungsberichte von
+DANTE-Tagungen werden in der DTK veröffentlicht. Material zu den
+Vorträgen findet man meist auf der Vereinswebsite zur jeweiligen
+Veranstaltung. Weitere bekannte Tagungen sind die BachoTeX, die jedes
+Jahr Anfang Mai in dem kleinen polnischen Ort Bachotek nordöstlich von
+Torun stattfindet. Mehr dazu kann man auf der [[https://www.dante.de/veranstaltungen/][Website von DANTE]], auf
+der [[https://www.tug.org/][Startseite der TUG]] und natürlich auch auf den Seiten der anderen
+User Groups erfahren. Außerdem gibt oder gab es an vielen Orten
+[[https://www.dante.de/dante-e-v/stammtische/][Stammtische]].
