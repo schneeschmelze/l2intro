@@ -1,0 +1,1 @@
+This guide is published under the LaTeX project public license (LPPL), version 1.3c. See [https://www.latex-project.org/lppl/lppl-1-3c/] for details.

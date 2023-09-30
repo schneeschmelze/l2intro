@@ -1,17 +1,31 @@
-# -*- mode: org; coding: utf-8 -*-
+#    -*- mode: org; coding: utf-8 -*-
 #+TITLE: Textsatz mit TeX/LaTeX
-#+SUBTITLE: Was ist (La)TeX? Und wie setzt man es ein?
+#+SUBTITLE: Eine sehr kurze Einführung in den Textsatz mit LaTeX
 #+AUTHOR: Jürgen Fenn
-#+DATE: <2023-09-22 Fr>
+#+DATE: <2023-09-27 Mi>
 #+LANGUAGE: de
-#+OPTIONS:  H:5 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
-#+OPTIONS:  TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc tags:nil
-#+OPTIONS:  title:nil
-#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+OPTIONS: H:5 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS: TeX:nil LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc tags:nil
+#+OPTIONS: title:nil
 #+EXPORT_SELECT_TAGS: noexport
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: dd
+#+options: html-link-use-abs-url:nil html-postamble:nil
+#+options: html-preamble:nil html-scripts:nil html-style:nil
+#+html_doctype: xhtml-strict
+#+html_container: div
+#+html_content_class: content
+#+description: Eine sehr kurze Einführung in den Textsatz mit LaTeX.
+#+keywords: latex, typesetting, typography, introduction, german
+#+html_head: <link rel="stylesheet" media="screen" type="text/css" href="bild.css" />
+#+html_head: <link rel="stylesheet" media="print" type="text/css" href="druck.css" />
+
+#+BEGIN_EXPORT html
+<p class="menu">
+<a href="index.html">Jürgen Fenn</a><br />
+<a href="veroeffentlichungen.html">Veröffentlichungen</a>&nbsp;&nbsp;
+<span class="aktuell">TeX</span>  
+</p>
+#+END_EXPORT
 
 * Was ist TeX? Was ist LaTeX?
 
@@ -26,10 +40,10 @@ Auf der Website des /LaTeX Project/ wird LaTeX (sprich: lah-tech)
 [[https://www.latex-project.org/about/][folgendermaßen]] beschrieben:
 
 #+begin_quote
-„LaTeX is a document preparation system for high-quality
+/„LaTeX is a document preparation system for high-quality
 typesetting. It is most often used for medium-to-large technical or
 scientific documents but it can be used for almost any form of
-publishing.“
+publishing.“/
 #+end_quote
 
 Bei [[https://de.wikipedia.org/wiki/LaTeX][LaTeX]] geht es also ums [[https://de.wikipedia.org/wiki/Satz_(Druck)][Setzen]] von Text und Grafik auf eine Seite
@@ -64,8 +78,8 @@ der Software für alle Plattformen.
   Gegenwart von (La)TeX
 - Alexandre Gaudeul:
   [[https://tug.org/TUGboat/Articles/tb24-1/gaudeul.pdf][The (La)TeX
-  project: A case study of open source software]], in: TUGboat 24
-  (2003), No.\nbsp{}1, pp.\nbsp{}132–145
+  project: A case study of open source software]], in:
+  TUGboat\nbsp{}24 (2003), No.\nbsp{}1, pp.\nbsp{}132–145
 
 Der mathematische Formelsatz ist gleichzeitig eine der größten Stärken
 von (La)TeX und eine schwere Hypothek für das Projekt. Denn durch die
@@ -116,7 +130,7 @@ Windows ist MiKTeX gleichwertig mit TeX\nbsp{}Live; unter macOS und
 Linux habe ich bisher keine Erfahrung mit MiKTeX gesammelt, seit 2007
 habe ich immer MacTeX verwendet.
 
-Infrage kommen alle Editoren, die reinen Text bearbeiten können. Es
+Infrage kommen alle Editoren, die [[https://de.wikipedia.org/wiki/Plain_text][reinen Text]] bearbeiten können. Es
 gibt einfache Editoren, die bei den Betriebssystemen dabei sind
 (Editor/Notepad unter Windows oder TextEdit auf dem Mac). Die meisten
 besseren Editoren haben auch einen TeX-Mode, es gibt aber auch
@@ -134,7 +148,7 @@ nicht zögern, zu einem anderen Editor zu wechseln. In den
 Einführungskursen, die ich bisher gehalten habe, hatte sich TeXstudio
 auf allen Plattformen bewährt. Die Wahl des Werkzeugs sollte von der
 Art und der Größe der Aufgabe abhängig gemacht werden, die damit
-bewältigt werden soll. Ich arbeite seit 2000 auf alle Plattformen mit
+bewältigt werden soll. Ich arbeite seit 2000 auf allen Plattformen mit
 Emacs.
 
 Eine Alternative zu den Plain-Text-Editoren ist ggf. [[https://www.lyx.org/][LyX]] (sprich:
@@ -146,8 +160,9 @@ Anleitungen.
 - Installationsanleitungen für [[https://www.latexbuch.de/latex-windows-installieren/][TeX\nbsp{}Live unter Windows\nbsp{}10]]
   und für [[https://www.latexbuch.de/latex-apple-mac-os-x-installieren/][MacTeX unter macOS]] stellt Joachim Schlosser bereit.
 - David Kastrup: [[https://tug.org/TUGboat/Articles/tb23-1/kastrup.pdf][Revisiting WYSIWYG Paradigms for Authoring LaTeX]], in:
-  TUGboat 23 (2003), No.\nbsp{}1, pp.\nbsp{}57–64. – Deutsch: [[https://archiv.dante.de/DTK/PDF/komoedie_2002_4.pdf][LaTeX
-  und WYSIWYG? preview-latex unter Emacs und andere Ansätz]]e, in: DTK
+  TUGboat\nbsp{}23 (2003), No.\nbsp{}1, pp.\nbsp{}57–64. – Deutsch:
+  [[https://archiv.dante.de/DTK/PDF/komoedie_2002_4.pdf][LaTeX und
+  WYSIWYG? preview-latex unter Emacs und andere Ansätz]]e, in: DTK
   4/2002, S.\nbsp{}10–26.
 
 * Online-Ressourcen
@@ -155,7 +170,14 @@ Anleitungen.
 Unter den Texten, die online verfügbar sind, ist die Einführung in
 LaTeX, die das /LaTeX Project/ bereitstellt, grundlegend. Sie ist in
 jeder TeX-Distribution enthalten und kann über =texdoc= aufgerufen
-werden. Kennen sollte man: [[https://ctan.org/pkg/usrguide][usrguide]], [[https://ctan.org/pkg/fntguide][fntguide]] und [[https://ctan.org/pkg/clsguide][clsguide]].
+werden. Kennen sollte man: [[https://ctan.org/pkg/usrguide][usrguide]], [[https://ctan.org/pkg/clsguide][clsguide]] und [[https://ctan.org/pkg/fntguide][fntguide]]. Bei den
+beiden ersten Titeln sollte man darauf achten, mit der aktuellsten
+Fassung zu arbeiten; sie wurden 2022 grundlegend überarbeitet, und die
+früheren Ausgaben tragen nun die Bezeichnung =usrguide-historic= und
+=clsguide-historic=. Neu hingekommen ist [[https://www.latex-project.org/help/documentation/usrguide3.pdf][usrguide3]], in dem neue
+Features beschrieben werden, die aus dem LaTeX3-Projekt Eingang in den
+LaTeX2e-Kernel gefunden haben. Das /LaTeX Project/ hat weitere
+grundlegende Dokumentation [[https://www.latex-project.org/help/documentation/][zusammengestellt]].
 
 Die Einführung [[https://ctan.org/pkg/lshort-german][l2kurz]] von Marco Daniel, Patrick Gundlach, Walter
 Schmidt, Jörg Knappen, Hubert Partl und Irene Hyna ist der klassische
@@ -175,9 +197,9 @@ mehr aktualisiert worden war. Auch die englische
 [[https://texfaq.org/][UK\nbsp{}TeX\nbsp{}FAQ]], die ursprünglich Robin Fairbairns betreut
 hatte, ist lesenswert, weil sie viele Hintergründe und Bezüge erklärt,
 die man sonst schwer in Anleitungen und Büchern findet und die man
-sich ohne tiefere Kenntnisse auch kaum erschließen kann. Seit Juni
-2018 wird die englische FAQ unter dem Titel /The TeX Frequently Asked
-Question List/ von David Carlisle, Stefan Kottwitz, Karl Berry,
+sich ohne tieferes Hintergrundwissen auch kaum erschließen kann. Seit
+Juni 2018 wird die englische FAQ unter dem Titel /The TeX Frequently
+Asked Question List/ von David Carlisle, Stefan Kottwitz, Karl Berry,
 Joseph Wright und vielen anderen [[https://github.com/texfaq/texfaq.github.io][auf GitHub fortgeführt]].
 
 Zur Fehlersuche in LaTeX-Dokumenten ist die Methode des
@@ -185,24 +207,32 @@ Minimalbeispiels unerlässlich. Christian Faulhammer hatte das Vorgehen
 im Einzelnen im Jahr 2009 [[https://www.minimalbeispiel.de/][zusammengefasst]].
 
 Didaktisch aufbereitetes Lehrmaterial zu LaTeX findet man leicht über
-eine einfache Internet-Suche, zum Beispiel nach den Begriffen =LaTeX
-Kurs=. Viele Materialien zu Veranstaltungen, die vorwiegend an
-Hochschulen gehalten werden, sind frei zugänglich.
+eine einfache Internet-Suche. Viele Materialien zu Veranstaltungen,
+die vorwiegend an Hochschulen gehalten werden, sind frei zugänglich.
+Team-Mitglieder aus dem /LaTeX Project/ haben zudem einen eigenen Kurs
+unter dem Titel /[[https://www.learnlatex.org/][Learn LaTeX]]/ entwickelt, der auch auf Deutsch
+verfügbar ist. Dort kann man in 16\nbsp{}Einheiten die Grundlagen der
+Sprache kennenlernen und vieles auch gleich im Webbrowser
+ausprobieren, ohne zuvor eine TeX-Distribution lokal installieren zu
+müssen. Jede Sprachversion wird ergänzt um eine Einheit zu den
+Besonderheiten, die es beim Setzen von Texten in der jeweiligen
+Sprache zu beachten gilt.
 
 In neuerer Zeit hat sich LaTeX zunehmend [[https://de.wikipedia.org/wiki/Unicode][Unicode]] und dem Fontformat
-[[https://de.wikipedia.org/wiki/OpenType][OpenType]] zugewendet. Seit April 2018 erwartet LaTeX die
-Eingabekodierung UTF-8. Wegweisend waren zwei neue TeX-Engines,
-nämlich [[https://xetex.sourceforge.net/][XeTeX]] (seit 2004, Übersicht [[https://www.tug.org/xetex/][bei der TUG]]) und [[http://www.luatex.org/][LuaTeX]] (seit
-2007). Ein Spinoff aus der Erstellung der zweiten Auflage des /LaTeX
-Begleiters/ und des /LaTeX Graphics Companion/ ist Michel Goossens'
-Einführung [[https://xml.web.cern.ch/lgc2/xetexmain.pdf][/The XeTeX Companion. TeX meets OpenType and Unicode/]]. Eine
-grundlegende Einführung zu LuaLaTeX ist [[https://ctan.org/pkg/lualatex-doc][lualatex-doc]] von Manuel
-Pégourié-Gonnard; eine [[https://ctan.org/pkg/lualatex-doc][deutsche Übersetzung]] gibt es von Christine
-Römer. Bereits in der achten Auflage von 2023 liegt die
-LaTeX-Einführung von Peter Flynn vor: /[[http://latex.silmaril.ie/formattinginformation/][Formatting information. An
-introduction to typesetting with LaTeX]]/ ist ein Klassiker, der
-online frei verfügbar ist und den aktuellen Stand der Entwicklung
-darstellt. Sein Buch geht von LuaLaTeX und XeTeX aus.
+[[https://de.wikipedia.org/wiki/OpenType][OpenType]] zugewandt. Seit April 2018 erwartet LaTeX die
+Eingabekodierung UTF-8, auch bei Verwendung der Standard-Engine
+[[https://www.tug.org/applications/pdftex/][pdfTeX]]. Wegweisend waren zwei neue TeX-Engines, nämlich [[https://xetex.sourceforge.net/][XeTeX]] (seit
+2004, Übersicht [[https://www.tug.org/xetex/][bei der TUG]]) und [[http://www.luatex.org/][LuaTeX]] (seit 2007). Ein Spinoff aus
+der Erstellung der zweiten Auflage des /LaTeX-Begleiters/ und des
+/LaTeX Graphics Companion/ ist Michel Goossens' Einführung [[https://xml.web.cern.ch/lgc2/xetexmain.pdf][/The XeTeX
+Companion. TeX meets OpenType and Unicode/]]. Eine praktische
+Einführung zu LuaLaTeX ist [[https://ctan.org/pkg/lualatex-doc][lualatex-doc]] von Manuel Pégourié-Gonnard;
+eine [[https://ctan.org/pkg/lualatex-doc][deutsche Übersetzung]] hatte Christine Römer erstellt. Bereits in
+der achten Auflage von 2023 liegt die LaTeX-Einführung von Peter Flynn
+vor: /[[http://latex.silmaril.ie/formattinginformation/][Formatting information. An introduction to typesetting with
+LaTeX]]/ ist ein Klassiker, der online frei verfügbar ist und der den
+aktuellen Stand der Entwicklung darstellt. Das Buch geht von LuaLaTeX
+und XeLaTeX aus.
 
 * Wissenschaftliche Arbeiten mit LaTeX schreiben
 
@@ -220,14 +250,14 @@ organisiert, erklären mehrere Autoren:
   rechtswissenschaftliche Arbeit und für das Referendariat von Axel
   Sodtalbers
 - [[https://www1.essex.ac.uk/linguistics/external/clmt/latex4ling/][LaTeX for Linguists]], LaTeX4Ling, von Douglas J. Arnold
-- David Latchman: [[https://www.tug.org/TUGboat/tb33-2/tb104latchman-thesis.pdf][Preparing your thesis in LaTeX]], in: TUGboat 33
+- David Latchman: [[https://www.tug.org/TUGboat/tb33-2/tb104latchman-thesis.pdf][Preparing your thesis in LaTeX]], in: TUGboat\nbsp{}33
   (2012), No.\nbsp{}2, pp.\nbsp{}167–171
 - [[http://scholarsfonts.net/][Fonts for scholars – Latin, Germanic Languages, Greek, Hebrew and
   Linguistics]] von David J. Perry, dort: [[http://scholarsfonts.net/xetextt.pdf][Creating Scolarly
   Multilingual Documents Using Unicode, OpenType, and XeTeX]]
 - [[https://www.logicmatters.net/latex-for-logicians/][LaTeX for Logicians]] von Peter Smith 
 
-Die Bibliothek der TU München erstellt jährlich eine
+Die Bibliothek der TU\nbsp{}München erstellt jährlich eine
 [[https://www.ub.tum.de/literaturverwaltung][Übersicht über
 Literaturverwaltungsprogramme]] – auch über Literaturverwaltungen,
 die sich zur Arbeit mit BibTeX-Datenbanken eignen. BibTeX und Biblatex
@@ -257,10 +287,12 @@ Sinne relevante Literatur erhält man im /[[http://ftp.math.utah.edu/pub/tex/bib
 archive]]/, das Nelson Beebe an der Universität Utah pflegt. Ein
 Ausschnitt daraus ist Teil jeder TeX-Distribution: Das Paket [[https://www.ctan.org/pkg/biblio][biblio]].
 Die Bibliographien texbook1, texbook2 und texbook3 enthalten Literatur
-speziell zu (La)TeX bis in die Gegenwart.
+speziell zu (La)TeX bis in die Gegenwart. Die Bibliografie der
+Beiträge in der /TeXnischen Komödie/ pflegen Leo Arnold und Uwe
+Ziegenhagen [[https://github.com/dante-ev/dtk-bibliography][auf GitHub]].
 
-- Nelson Beebe: [[https://tug.org/TUGboat/Articles/tb25-1/beebe-bib.pdf][A bibliographer's toolbox]], in: TUGboat 25(1), 2004,
-  Practical TeX 2004 proceedings, pp.\nbsp{}89–104
+- Nelson Beebe: [[https://tug.org/TUGboat/Articles/tb25-1/beebe-bib.pdf][A bibliographer's toolbox]], in: TUGboat\nbsp{}25(1),
+  2004, Practical TeX 2004 proceedings, pp.\nbsp{}89–104
 
 Grundlegend für TeX ist das /TeXbook/ von Donald\nbsp{}E. Knuth
 (1984), dessen Quelltext, ebenso wie das /METAFONTbook/ (1986), [[https://www.ctan.org/pkg/knuth-dist][auf
@@ -285,15 +317,15 @@ umfassendste Dokumentation zu LaTeX2e von Frank Mittelbach, Michel
 Goossens und weiteren Autoren. Im Jahr 2004 erschien die zweite
 Auflage der englischen Ausgabe des ersten Bandes, ein Jahr später die
 deutsche Übersetzung mit einer Reihe von Ergänzungen für den deutschen
-Sprachraum. Aktuell ist die dritte Auflage, die im Jahr 2023 bei dem
-US-amerikanischen Verlag informIT [[https://www.informit.com/store/latex-companion-parts-i-ii-3rd-edition-9780138166489?ranMID=24808][erschien]] und die leider im deutschen
-Buchhandel nur schwer zu bekommen ist. Die zweite Auflage des /LaTeX
-Graphics Companion/ kam 2007 heraus mit einem Nachdruck bei Lehmanns
-Media aus dem Jahr 2022. Der /LaTeX Web Companion/ ist weiterhin auf
-Englisch lieferbar, er wurde aber seit 1999 nicht mehr neu aufgelegt
-und ist daher veraltet; die deutsche Ausgabe /Mit LaTeX ins Web –
-elektronisches Publizieren mit TeX, HTML und XML/ ist leider im
-Buchhandel vergriffen.
+Sprachraum. Aktuell ist die dritte Auflage des /LaTeX Companion/, die
+im Jahr 2023 bei dem US-amerikanischen Verlag informIT [[https://www.informit.com/store/latex-companion-parts-i-ii-3rd-edition-9780138166489?ranMID=24808][erschien]] und
+die leider im deutschen Buchhandel nur schwer zu bekommen ist. Die
+zweite Auflage des /LaTeX Graphics Companion/ kam 2007 heraus mit
+einem korrigierten Nachdruck bei Lehmanns Media aus dem Jahr 2022. Der
+/LaTeX Web Companion/ ist weiterhin auf Englisch lieferbar, er wurde
+aber seit 1999 nicht mehr neu aufgelegt und ist daher veraltet; die
+deutsche Ausgabe /Mit LaTeX ins Web – elektronisches Publizieren mit
+TeX, HTML und XML/ ist leider im Buchhandel vergriffen.
 
 Die Veröffentlichung der zweiten Auflage des LaTeX-Begleiters im Jahr
 2005 löste seinerzeit eine Renaissance der Literatur zu LaTeX aus.
@@ -316,12 +348,13 @@ Geisteswissenschaften:
 - Maïeuil Rouquette:
   [[https://shs.hal.science/halshs-00924546][(Xe)LaTeX appliqué aux
   sciences humaine]]s. Atramenta, Tampere, 2012, online in: Archive
-  ouverte en Sciences de l'Homme et de la Société, 2014, [[https://github.com/maieul/latexhumain][Quelltext auf GitHub]].
+  ouverte en Sciences de l'Homme et de la Société, 2014, [[https://github.com/maieul/latexhumain][Quelltext auf
+  GitHub]].
 
 Die Zeitschriften der TeX-Anwendervereinigungen werden in Bibliotheken
 gesammelt und in öffentlichen Archiven bereitgestellt. Der Bezug ist
 in der Mitgliedschaft enthalten. Mit einer gewissen Verzögerung sind
-sie auch für Nichtmitglieder online zugänglich:
+sie auch für Nichtmitglieder online frei zugänglich:
 
 - [[https://www.dante.de/dtk/][Die TeXnische Komödie]] (DTK), Mitgliederzeitschrift der
   Deutschsprachigen Anwendervereinigung TeX DANTE
@@ -350,8 +383,9 @@ Gemeinde von Entwicklern und Benutzern, die sich online zusammenfinden
 und untereinander austauschen. Zwei Aggregatoren – [[https://planet.dante.de/][planet.dante.de]] und
 [[https://texample.net/community/][TeXample.net]] – sammeln Blogs zum Thema. Auf ihrer Hauptseite fasst die
 [[https://tug.org/][TeX Users Group]] Nachrichten zusammen. Das /LaTeX Project/ erstellt in
-bestimmten Abständen Newsletter über [[https://www.latex-project.org/news/latex2e-news/][Neuigkeiten zu LaTeX2e]] und [[https://www.latex-project.org/news/latex3-news/][zu
-LaTeX3]], die man lesen sollte. In der DTK erscheinen deutsche
+bestimmten Abständen Newsletter über [[https://www.latex-project.org/news/latex2e-news/][Neuigkeiten zu LaTeX2e]] und
+[[https://www.latex-project.org/news/latex3-news/][zu LaTeX3]], die
+man lesen sollte. In der DTK erscheinen seit 2021 deutsche
 Übersetzungen. Sie begleiten neue Releases und informieren allgemein
 über die Entwicklung von TeX. Neue Pakete auf dem dezentral
 organisierten Softwarearchiv [[https://ctan.org/][CTAN]] werden auf der Mailingliste [[https://lists.dante.de/mailman/listinfo/ctan-ann][ctan-ann]]
@@ -381,28 +415,40 @@ ist der [[https://tex.stackexchange.com/][TeX-LaTeX StackExchange]]. Ein weitere
 ist die [[https://latex.org/forum/][LaTeX Community]]. Webforen in deutscher Sprache sind: [[https://golatex.de/][goLaTeX]],
 [[https://komascript.de/forum][KOMA-Script]], [[https://www.mrunix.de/forums/forumdisplay.php?38-LaTeX-Forum][mrunix.de]] und [[https://www.texwelt.de/][TeXwelt]].
 
-- Jim Hefferon: [[https://www.tug.org/TUGboat/tb32-1/tb100heff.pdf][Which way to the forum?]], in: TUGboat 32 (2011),
+- Jim Hefferon: [[https://www.tug.org/TUGboat/tb32-1/tb100heff.pdf][Which way to the forum?]], in: TUGboat\nbsp{}32 (2011),
   No.\nbsp{}1, pp.\nbsp{}30–31.
-- Stefan Kottwitz:
-  [[https://www.tug.org/TUGboat/tb32-3/tb102kottwitz.pdf][TeX online
-  communities – discussion and content]], in: TUGboat Volume 32
-  (2011), No.\nbsp{}3, pp.\nbsp{}248–250.
+- Stefan Kottwitz: [[https://www.tug.org/TUGboat/tb32-3/tb102kottwitz.pdf][TeX online communities – discussion and content]],
+  in: TUGboat\nbsp{}32 (2011), No.\nbsp{}3, pp.\nbsp{}248–250.
 
 Die TeX-Anwendervereinigungen organisieren eine Reihe von Tagungen, an
 denen man teilnehmen kann. Neulinge sind dort stets willkommen. Die
 Deutschsprachige Anwendervereinigung TeX veranstaltet jeweils eine
 Tagung im Frühling und eine im Herbst, stets zusammen mit einer
-Mitgliederversammlung. Die TeX Users Group TUG trägt eine größere
-Tagung im Sommer aus, abwechselnd in den USA und im Ausland. Infolge
-der Corona-Pandemie ist oft auch eine virtuelle Teilnahme möglich, und
-die Beiträge sind auf YouTube abrufbar. Die Präsentationen werden auf
-der Tagungswebsite gesammelt, und die Proceedings der TUG-Tagung
+Mitgliederversammlung. Die Präsentationen zu den Vorträgen findet man
+[[https://github.com/dante-ev/Vortraege_Tagungen][auf GitHub]]. Die TeX Users Group TUG trägt eine größere Tagung im
+Sommer aus, abwechselnd in den USA und im Ausland. Infolge der
+Corona-Pandemie ist oft auch eine virtuelle Teilnahme möglich, und die
+Beiträge sind auf YouTube abrufbar. Die Präsentationen werden auf der
+Tagungswebsite gesammelt, und die Proceedings der TUG-Tagung
 erscheinen in der Zeitschrift TUGboat. Tagungsberichte von
-DANTE-Tagungen werden in der DTK veröffentlicht. Material zu den
-Vorträgen findet man meist auf der Vereinswebsite zur jeweiligen
-Veranstaltung. Weitere bekannte Tagungen sind die BachoTeX, die jedes
-Jahr Anfang Mai in dem kleinen polnischen Ort Bachotek nordöstlich von
-Torun stattfindet. Mehr dazu kann man auf der [[https://www.dante.de/veranstaltungen/][Website von DANTE]], auf
-der [[https://www.tug.org/][Startseite der TUG]] und natürlich auch auf den Seiten der anderen
-User Groups erfahren. Außerdem gibt oder gab es an vielen Orten
-[[https://www.dante.de/dante-e-v/stammtische/][Stammtische]].
+DANTE-Tagungen werden in der DTK veröffentlicht. Weitere bekannte
+Tagungen sind die BachoTeX, die jedes Jahr Anfang Mai in dem kleinen
+polnischen Ort Bachotek nordöstlich von Torun stattfindet. Mehr dazu
+kann man auf der [[https://www.dante.de/veranstaltungen/][Website von DANTE]], auf der [[https://www.tug.org/][Startseite der TUG]] und
+natürlich auch auf den Seiten der anderen User Groups erfahren.
+Außerdem gibt oder gab es an vielen Orten [[https://www.dante.de/dante-e-v/stammtische/][Stammtische]]. Eine neuere
+Veranstaltungsreihe online ist die /[[https://texhour.github.io/][TeX\nbsp{}Hour]]/ jeweils zu einem
+bestimmten Thema, die von Jonathan Fine im Wochentakt auf Zoom
+organisiert wird; die Aufzeichnungen können später in [[https://www.youtube.com/@texhour][seinem
+YouTube-Kanal]] betrachtet werden. Ähnlich sind die /Exposées
+mensuels/ der Association GUTenberg, die es ebenfalls [[https://www.youtube.com/@associationgutenberg5336][auf YouTube]] zu
+sehen gibt.
+
+#+BEGIN_EXPORT html
+<hr />
+
+<p class="footer">
+  <a href="impressum.html">Impressum</a>&nbsp;&nbsp;
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+</p>
+#+END_EXPORT
