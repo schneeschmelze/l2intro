@@ -347,9 +347,9 @@ Geisteswissenschaften:
 
 - Maïeuil Rouquette:
   [[https://shs.hal.science/halshs-00924546][(Xe)LaTeX appliqué aux
-  sciences humaine]]s. Atramenta, Tampere, 2012, online in: Archive
-  ouverte en Sciences de l'Homme et de la Société, 2014, [[https://github.com/maieul/latexhumain][Quelltext auf
-  GitHub]].
+  sciences humaines]]. Atramenta, Tampere, 2012, online in: Archive
+  ouverte en Sciences de l'Homme et de la Société, 2014,
+  [[https://github.com/maieul/latexhumain][Quelltext auf GitHub]].
 
 Die Zeitschriften der TeX-Anwendervereinigungen werden in Bibliotheken
 gesammelt und in öffentlichen Archiven bereitgestellt. Der Bezug ist
