@@ -253,8 +253,6 @@ organisiert, erklären mehrere Autoren:
   Sodtalbers
 - [[https://www.suenkler.info/emacs/emacs-latex/][Juristische Texte mit dem Textsatzsystem LaTeX]] von Hendrik Sünkler
 - [[https://www1.essex.ac.uk/linguistics/external/clmt/latex4ling/][LaTeX for Linguists]], LaTeX4Ling, von Douglas J. Arnold
-- David Latchman: [[https://www.tug.org/TUGboat/tb33-2/tb104latchman-thesis.pdf][Preparing your thesis in LaTeX]], in: TUGboat\nbsp{}33
-  (2012), No.\nbsp{}2, pp.\nbsp{}167–171
 - [[http://scholarsfonts.net/][Fonts for scholars – Latin, Germanic Languages, Greek, Hebrew and
   Linguistics]] von David J. Perry, dort: [[http://scholarsfonts.net/xetextt.pdf][Creating Scolarly
   Multilingual Documents Using Unicode, OpenType, and XeTeX]]
