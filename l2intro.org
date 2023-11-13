@@ -27,14 +27,14 @@
 </p>
 #+END_EXPORT
 
-* Was ist TeX? Was ist LaTeX?
-
 #+begin_quote
 /„TeX has always had a special place in my heart. We made the world a
 better place for scientists and engineers. What other piece of
 software is still in active use, essentially the same as it was
 25\nbsp{}years ago?“ –\nbsp{}[[https://tug.org/interviews/fuchs.html][David Fuchs]]/
 #+end_quote
+
+* Was ist TeX? Was ist LaTeX?
 
 Auf der Website des /LaTeX Project/ wird LaTeX (sprich: lah-tech)
 [[https://www.latex-project.org/about/][folgendermaßen]] beschrieben:
@@ -58,28 +58,34 @@ ein Software-Paket, das aus TeX-Makros besteht.
 
 Die Ausgabequalität von LaTeX ist unerreicht schön. Die Bedienung von
 TeX samt der Hilfsprogramme ist einfach zu erlernen. Und die
-TeX-Anwendergruppen – im deutschen Sprachraum: die [[https://www.dante.de/][Deutschsprachige
-Anwendervereinigung TeX e.\nbsp{}V.]], international: die [[https://tug.org/][TeX Users
+TeX-Anwendergruppen – im deutschen Sprachraum: die
+[[https://www.dante.de/][Deutschsprachige Anwendervereinigung TeX
+e.\nbsp{}V.]], international: die [[https://tug.org/][TeX Users
 Group]] – sowie das [[https://www.latex-project.org/][/LaTeX Project/]] und die Maintainer des
 [[https://ctan.org/][Comprehensive TeX Archive Networks CTAN]] sorgen gemeinnützig und
 ehrenamtlich für die Pflege, die Weiterentwicklung und die Verteilung
-der Software für alle Plattformen.
+der Software für alle Plattformen. (La)TeX ist freie Software. LaTeX
+steht unter der [[https://www.latex-project.org/lppl/][LaTeX Project Public License]] (LPPL).
 
 - [[https://cs.stanford.edu/~knuth/][Homepage von Donald E. Knuth]], Stanford University
 - [[https://tug.org/whatis.html][Just what is TeX?]], ein Überblick bei der TeX Users Group
 - [[https://nitens.org/w/latex/][The Beauty of LaTeX]] von Dario Taraborelli
-- [[https://tug.org/interviews/][TUG Interview Corner]], Interviews mit Teilnehmern an TeX-Projekten
-- Gianluca Pignalberi, Dave Walden: Interview of Frank Mittelbach, in:
-  Free Software Magazine, 23.\nbsp{}März 2006; [[https://www.tug.org/interviews/mittelbach.pdf][bei der TUG]]
+
+Zur Geschichte von (La)TeX:
+  
+- Frank Mittelbach: [[https://www.tug.org/TUGboat/tb44-1/tb136mitt-history.pdf][LaTeX anniversaries---A look in two directions]],
+  in: TUGBoat\nbsp{}44 (2023), No.\nbsp{}1, pp.\nbsp{}77--86. [[https://doi.org/10.47397/tb/44-1/tb136mitt-history][DOI:
+  10.47397/tb/44-1/tb136mitt-history]] (mit einem Auszug aus dem LaTeX
+  Companion, 3.\nbsp{}Auflage, S.\nbsp{}1--8 einschließlich
+  Bibliografie).
 - Arno Trautmann: [[https://www.ctan.org/pkg/tex-overview][An overview of TeX, its children and their friends]],
   2012, zur Geschichte von TeX 
 - [[https://cre.fm/cre127-tex-und-latex][TeX und LaTeX]], in: Chaosradio Express, 26.\nbsp{}Juni 2009, Tim
   Pritlove im Gespräch mit Joachim Schrod über Geschichte und
   Gegenwart von (La)TeX
-- Alexandre Gaudeul:
-  [[https://tug.org/TUGboat/Articles/tb24-1/gaudeul.pdf][The (La)TeX
-  project: A case study of open source software]], in:
-  TUGboat\nbsp{}24 (2003), No.\nbsp{}1, pp.\nbsp{}132–145
+- Gianluca Pignalberi, Dave Walden: Interview of Frank Mittelbach, in:
+  Free Software Magazine, 23.\nbsp{}März 2006; [[https://www.tug.org/interviews/mittelbach.pdf][bei der TUG]]
+- [[https://tug.org/interviews/][TUG Interview Corner]], Interviews mit Teilnehmern an TeX-Projekten
 
 Der mathematische Formelsatz ist gleichzeitig eine der größten Stärken
 von (La)TeX und eine schwere Hypothek für das Projekt. Denn durch die
@@ -137,7 +143,8 @@ besseren Editoren haben auch einen TeX-Mode, es gibt aber auch
 spezielle TeX-Editoren, die das Arbeiten mit (La)TeX besonders gut
 unterstützen:
 
-- [[https://www.gnu.org/software/emacs/][GNU\nbsp{}Emacs]] mit [[https://www.gnu.org/software/auctex/][AUCTeX]] (unter macOS: [[http://aquamacs.org/][Aquamacs]] oder [[https://emacsformacosx.com/][Emacs.app]]),
+- [[https://www.gnu.org/software/emacs/][GNU\nbsp{}Emacs]] mit [[https://www.gnu.org/software/auctex/][AUCTeX]]
+  (unter macOS: [[http://aquamacs.org/][Aquamacs]] oder [[https://emacsformacosx.com/][Emacs.app]]),
 - [[https://www.vim.org/][vim]] mit der [[https://vim-latex.sourceforge.net/][latex-suite]],
 - [[https://www.xm1math.net/texmaker/][Texmaker]] oder dessen Fork [[https://www.texstudio.org/][TeXstudio]],
 - [[https://pages.uoregon.edu/koch/texshop/][TeXShop]] oder dessen Klon [[https://tug.org/texworks/][TeXworks]].
@@ -159,6 +166,8 @@ Anleitungen.
 
 - Installationsanleitungen für [[https://www.latexbuch.de/latex-windows-installieren/][TeX\nbsp{}Live unter Windows\nbsp{}10]]
   und für [[https://www.latexbuch.de/latex-apple-mac-os-x-installieren/][MacTeX unter macOS]] stellt Joachim Schlosser bereit.
+- Marcin Borkowski: [[https://www.tug.org/TUGboat/tb38-2/tb119borkowski.pdf][TeXing in Emacs]], in: TUGboat\nbsp{}39 (2018),
+  No.\nbsp{}1, pp.\nbsp{}30–36.
 - David Kastrup: [[https://tug.org/TUGboat/Articles/tb23-1/kastrup.pdf][Revisiting WYSIWYG Paradigms for Authoring LaTeX]], in:
   TUGboat\nbsp{}23 (2003), No.\nbsp{}1, pp.\nbsp{}57–64. – Deutsch:
   [[https://archiv.dante.de/DTK/PDF/komoedie_2002_4.pdf][LaTeX und
@@ -169,10 +178,9 @@ Anleitungen.
 
 Unter den Texten, die online verfügbar sind, ist die Einführung in
 LaTeX, die das /LaTeX Project/ bereitstellt, grundlegend. Sie ist in
-jeder TeX-Distribution enthalten und kann über =texdoc= aufgerufen
-werden. Kennen sollte man: [[https://ctan.org/pkg/usrguide][usrguide]], [[https://ctan.org/pkg/clsguide][clsguide]] und [[https://ctan.org/pkg/fntguide][fntguide]]. Bei den
-beiden ersten Titeln sollte man darauf achten, mit der aktuellsten
-Fassung zu arbeiten; sie wurden 2022 grundlegend überarbeitet, und die
+jeder TeX-Distribution enthalten und kann über =texdoc= im Terminal
+aufgerufen werden. Kennen sollte man: [[https://ctan.org/pkg/usrguide][usrguide]], [[https://ctan.org/pkg/clsguide][clsguide]] und [[https://ctan.org/pkg/fntguide][fntguide]].
+Die beiden ersten Titel wurden 2022 grundlegend überarbeitet, und die
 früheren Ausgaben tragen nun die Bezeichnung =usrguide-historic= und
 =clsguide-historic=. Neu hingekommen ist [[https://www.latex-project.org/help/documentation/usrguide3.pdf][usrguide3]], in dem neue
 Features beschrieben werden, die aus dem LaTeX3-Projekt Eingang in den
@@ -220,19 +228,28 @@ Sprache zu beachten gilt.
 
 In neuerer Zeit hat sich LaTeX zunehmend [[https://de.wikipedia.org/wiki/Unicode][Unicode]] und dem Fontformat
 [[https://de.wikipedia.org/wiki/OpenType][OpenType]] zugewandt. Seit April 2018 erwartet LaTeX die
-Eingabekodierung UTF-8, auch bei Verwendung der Standard-Engine
+Eingabekodierung UTF-8, auch bei Verwendung der (noch) Standard-Engine
 [[https://www.tug.org/applications/pdftex/][pdfTeX]]. Wegweisend waren zwei neue TeX-Engines, nämlich [[https://xetex.sourceforge.net/][XeTeX]] (seit
-2004, Übersicht [[https://www.tug.org/xetex/][bei der TUG]]) und [[http://www.luatex.org/][LuaTeX]] (seit 2007). Ein Spinoff aus
-der Erstellung der zweiten Auflage des /LaTeX-Begleiters/ und des
-/LaTeX Graphics Companion/ ist Michel Goossens' Einführung [[https://xml.web.cern.ch/lgc2/xetexmain.pdf][/The XeTeX
-Companion. TeX meets OpenType and Unicode/]]. Eine praktische
-Einführung zu LuaLaTeX ist [[https://ctan.org/pkg/lualatex-doc][lualatex-doc]] von Manuel Pégourié-Gonnard;
-eine [[https://ctan.org/pkg/lualatex-doc][deutsche Übersetzung]] hatte Christine Römer erstellt. Bereits in
-der achten Auflage von 2023 liegt die LaTeX-Einführung von Peter Flynn
-vor: /[[http://latex.silmaril.ie/formattinginformation/][Formatting information. An introduction to typesetting with
-LaTeX]]/ ist ein Klassiker, der online frei verfügbar ist und der den
-aktuellen Stand der Entwicklung darstellt. Das Buch geht von LuaLaTeX
-und XeLaTeX aus.
+2004, Übersicht [[https://www.tug.org/xetex/][bei der TUG]]) und [[http://www.luatex.org/][LuaTeX]] (seit 2007). Mit ihnen kann
+man jede Schriftart, die auf dem System installiert ist, unmittelbar
+in LaTeX einsetzen. Eine praktische Einführung zu LuaLaTeX ist
+[[https://ctan.org/pkg/lualatex-doc][lualatex-doc]] von Manuel Pégourié-Gonnard; eine [[https://ctan.org/pkg/lualatex-doc][deutsche Übersetzung]]
+hatte Christine Römer erstellt. Parallel verlief die Entwicklung von
+Unicode-Schriften, auch für den Mathematiksatz. Bereits in der achten
+Auflage von 2023 liegt die LaTeX-Einführung von Peter Flynn vor:
+/[[http://latex.silmaril.ie/formattinginformation/][Formatting information. An introduction to typesetting with LaTeX]]/
+(beginlatex) ist mittlerweile auch ein Klassiker, der online frei
+verfügbar ist und der den aktuellen Stand der Entwicklung darstellt.
+Das Buch geht von LuaLaTeX und XeLaTeX aus. Einen Überblick über die
+Schriften, die schon eine Unterstützung für LaTeX erhalten haben,
+bietet übrigens der /[[https://tug.org/FontCatalogue/][LaTeX Font Catalogue]]/. Nächster Schritt in der
+LaTeX-Entwicklung ist die Möglichkeit, [[https://www.latex-project.org/publications/indexbytopic/pdf/][barrierefreie Dokumente]] zu
+erstellen, was sich vor allem für den mathematischen Formelsatz als
+schwierig erweist.
+
+- Eric Larson, Isabel Vogt: [[https://www.ams.org/journals/notices/202301/rnoti-p68.pdf][Making Accessible Documents Using LaTeX]],
+  in: Notices of the American Mathematical Society\nbsp{}70 (2023),
+  No.\nbsp{}1, pp.\nbsp{}68--71.
 
 * Wissenschaftliche Arbeiten mit LaTeX schreiben
 
@@ -335,15 +352,19 @@ Computerzeitschrift c't und für die DTK besprochen hatte. Bereits seit
 Newsgroup de.comp.text.tex von Christian Faulhammer initiiert worden
 war. Die damals erschienenen Buchbesprechungen – jeweils aus dem
 Blickwinkel von Anfängern geschrieben – [[https://www.ctan.org/pkg/dante-book-reviews][wurden auf CTAN gesammelt]].
-Neuerscheinungen seit 2005 sammle ich auch in einer [[https://www.zotero.org/groups/716380/latex-lehrbcher/library][Zotero-Gruppe]]. Als
-praktisches Lehrbuch ist derzeit /[[https://www.mitp.de/IT-WEB/Studium/Wissenschaftliche-Arbeiten-schreiben-mit-LaTeX.html][Wissenschaftliche Arbeiten schreiben
-mit LaTeX]]/ von Joachim Schlosser geeignet. Merklich ist der Trend weg
-vom lektorierten Fachbuch aus dem Verlag hin zu Selfpublishing als
-E-Book, teils im Open Access, mit der Möglichkeit zu einer Bestellung
-als Print on demand. Erwähnenswert aus den letzten Jahren ist – neben
-den [[https://www.dickimaw-books.com/latexresources.html][Büchern von Nicola Talbot]] – vor allem ein Titel von Maïeuil
-Rouquette zum Einsatz von LaTeX in den Sozial- und
-Geisteswissenschaften:
+Neuerscheinungen seit 2005 sammle ich auch in einer [[https://www.zotero.org/groups/716380/latex-lehrbcher/library][Zotero-Gruppe]]. Die
+umfangreichste Sammlung von Rezensionen von Büchern über (La)TeX und
+Typografie [[https://www.tug.org/books/][findet man auf der Website der TUG]]. Die Beiträge erschienen
+in Zeitschrift TUGboat. Als praktisches Lehrbuch in deutscher Sprache
+ist derzeit
+/[[https://www.mitp.de/IT-WEB/Studium/Wissenschaftliche-Arbeiten-schreiben-mit-LaTeX.html][Wissenschaftliche
+Arbeiten schreiben mit LaTeX]]/ von Joachim Schlosser geeignet.
+Merklich ist der Trend weg vom lektorierten Fachbuch aus dem Verlag
+hin zu Selfpublishing als E-Book, teils im Open Access, mit der
+Möglichkeit zu einer Bestellung als Print on demand. Erwähnenswert aus
+den letzten Jahren ist – neben den [[https://www.dickimaw-books.com/latexresources.html][Büchern von Nicola Talbot]] – vor
+allem ein Titel von Maïeuil Rouquette zum Einsatz von LaTeX in den
+Sozial- und Geisteswissenschaften:
 
 - Maïeuil Rouquette:
   [[https://shs.hal.science/halshs-00924546][(Xe)LaTeX appliqué aux
@@ -443,6 +464,44 @@ organisiert wird; die Aufzeichnungen können später in [[https://www.youtube.co
 YouTube-Kanal]] betrachtet werden. Ähnlich sind die /Exposées
 mensuels/ der Association GUTenberg, die es ebenfalls [[https://www.youtube.com/@associationgutenberg5336][auf YouTube]] zu
 sehen gibt.
+
+* Alternativen zu LaTeX
+
+Wer seine Drucksachen mit LaTeX nur setzen, aber nicht auch in LaTeX
+schreiben möchte, hat genaugenommen eine gute Handvoll Möglichkeiten.
+Dazu abschließend ein Ausblick.
+
+Man kann, wie vorstehend schon erwähnt, [[https://www.lyx.org/][LyX]] verwenden. Oder man kann
+sich das Makropaket [[http://wiki.contextgarden.net/][ConTeXt]] ansehen, das ebenfalls auf TeX aufsetzt
+und das insoweit eine Alternative zu LaTeX ist, bei der Features aus
+dem Desktop Publishing besonders berücksichtigt wurden. Allerdings
+gibt es bei ConTeXt wesentlich weniger Unterstützung, weil die
+Community sehr viel kleiner ist.
+
+Weiterhin kämen verschiedene XML-Formate in Frage, in denen man fast
+beliebig komplexe Daten sammeln und auszeichnen kann, um sie später
+für den Satz nach LaTeX zu konvertieren. Das wäre vor allem ein Ansatz
+für komplexere Werke, der auch in der Herstellung erprobt ist.
+
+- Apostolos Syropoulos und TeX Users Group, Hrsg. 2004. TeX, XML, and
+  digital typography: International Conference on TeX, XML, and
+  Digital Typography, held jointly with the 25th Annual Meeting of the
+  TeX Users Group, TUG 2004, Xanthi, Greece, August 30–September 3,
+  2004; proceedings. Lecture notes in computer science 3130. Berlin;
+  New York: Springer.
+
+Oder man schreibt in einer vereinfachten Auszeichnungssprache und
+konvertiert diese nach LaTeX. Beispiele hierfür wären [[https://orgmode.org/][Org-Mode]],
+[[https://daringfireball.net/projects/markdown/][Markdown]] oder [[https://asciidoc.org/][Asciidoc]], für die es jeweils ernstzunehmende Umgebungen
+gibt, so dass man damit auch gut wissenschaftliche Texte schreiben
+kann. Org-Mode bringt seinen eigenen /[[https://orgmode.org/org.html#Exporting][Export Dispatcher]]/ mit.
+Ansonsten vermittelt bei solchen Projekten [[https://pandoc.org/][Pandoc]] als universeller
+Konverter zwischen den vielen Format-Welten.
+
+In diesen Fällen steht LaTeX als bloßer Setzer nicht mehr am Anfang,
+sondern am Ende einer Kette. Aber dort braucht man dann eben auch
+weiterhin gute LaTeX-Kenntnisse, damit aus dem Manuskript ein schönes
+und brauchbares PDF für Preprint wird.
 
 #+BEGIN_EXPORT html
 <hr />

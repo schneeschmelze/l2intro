@@ -1,3 +1,25 @@
+2023-11-13  Juergen Fenn  <jfenn@gmx.net>
+
+	* l2intro.org: add Borkowski, TUGboat 39 (2018), No. 1, pp. 30--36
+
+2023-11-12  Juergen Fenn  <jfenn@gmx.net>
+
+	* l2intro.org: add reviews in TUGboat
+
+2023-11-05  Juergen Fenn  <jfenn@gmx.net>
+
+	* l2intro.org: add Mittelbach, TUGboat 44 (2023), Nr. 1, pp. 77--86
+
+	* l2intro.org: rm Goossens, XeTeX Companion
+
+	* l2intro.org: add accessibility, tagged pdf; some minor fixes
+
+2023-10-21  Juergen Fenn  <jfenn@gmx.net>
+
+	* l2intro.org: add a section on alternatives to LaTeX
+
+	* l2intro.org: add link to The LaTeX Font Catalogue
+
 2023-10-02  Juergen Fenn  <jfenn@gmx.net>
 
 	* l2intro.org: add online resources for the humanities
@@ -19,7 +41,7 @@
 2023-09-25  Juergen Fenn  <jfenn@gmx.net>
 
 	* l2intro.org: add configuration for HTML export
-	
+
 	* l2intro.org: add DANTE meetings at github.com/dante-ev/Vortraege_Tagungen
 
 	* l2intro.org: add DTK bibliography at github.com/dante-ev/dtk-bibliography
