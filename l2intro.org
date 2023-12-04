@@ -208,7 +208,10 @@ die man sonst schwer in Anleitungen und Büchern findet und die man
 sich ohne tieferes Hintergrundwissen auch kaum erschließen kann. Seit
 Juni 2018 wird die englische FAQ unter dem Titel /The TeX Frequently
 Asked Question List/ von David Carlisle, Stefan Kottwitz, Karl Berry,
-Joseph Wright und vielen anderen [[https://github.com/texfaq/texfaq.github.io][auf GitHub fortgeführt]].
+Joseph Wright und vielen anderen [[https://github.com/texfaq/texfaq.github.io][auf GitHub fortgeführt]]. Eine
+[[https://faq.gutenberg-asso.fr/][französischsprachige FAQ]] mit ähnlichem Ansatz gibt es von der
+französischen Benutzergruppe GUTenberg. Sie wird über eine
+vereinseigene Gitlab-Instanz gepflegt.
 
 Zur Fehlersuche in LaTeX-Dokumenten ist die Methode des
 Minimalbeispiels unerlässlich. Christian Faulhammer hatte das Vorgehen
@@ -459,9 +462,9 @@ kann man auf der [[https://www.dante.de/veranstaltungen/][Website von DANTE]], a
 natürlich auch auf den Seiten der anderen User Groups erfahren.
 Außerdem gibt oder gab es an vielen Orten [[https://www.dante.de/dante-e-v/stammtische/][Stammtische]]. Eine neuere
 Veranstaltungsreihe online ist die /[[https://texhour.github.io/][TeX\nbsp{}Hour]]/ jeweils zu einem
-bestimmten Thema, die von Jonathan Fine im Wochentakt auf Zoom
-organisiert wird; die Aufzeichnungen können später in [[https://www.youtube.com/@texhour][seinem
-YouTube-Kanal]] betrachtet werden. Ähnlich sind die /Exposées
+bestimmten Thema, die von Jonathan Fine seit Dezember\nbsp{}2020 im
+Wochentakt auf Zoom organisiert wird; die Aufzeichnungen können später
+in [[https://www.youtube.com/@texhour][seinem YouTube-Kanal]] betrachtet werden. Ähnlich sind die /Exposées
 mensuels/ der Association GUTenberg, die es ebenfalls [[https://www.youtube.com/@associationgutenberg5336][auf YouTube]] zu
 sehen gibt.
 
@@ -498,10 +501,10 @@ kann. Org-Mode bringt seinen eigenen /[[https://orgmode.org/org.html#Exporting][
 Ansonsten vermittelt bei solchen Projekten [[https://pandoc.org/][Pandoc]] als universeller
 Konverter zwischen den vielen Format-Welten.
 
-In diesen Fällen steht LaTeX als bloßer Setzer nicht mehr am Anfang,
-sondern am Ende einer Kette. Aber dort braucht man dann eben auch
-weiterhin gute LaTeX-Kenntnisse, damit aus dem Manuskript ein schönes
-und brauchbares PDF für Preprint wird.
+In diesen Fällen steht LaTeX nicht mehr als Format am Anfang, sondern
+als bloßer Setzer am Ende einer Kette. Aber dort braucht man dann eben
+auch weiterhin gute LaTeX-Kenntnisse, damit aus dem Manuskript ein
+schönes und brauchbares PDF für Preprint wird.
 
 #+BEGIN_EXPORT html
 <hr />
